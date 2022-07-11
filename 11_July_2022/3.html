@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 134 -->
+    <div>Write a JavaScript program to change the characters (lower case) in a string where a turns into z, b turns into y, c turns into x, ..., n turns into m, m turns into n, ..., z turns into a.</div>
+
+    <script>
+
+        var str = prompt('enter string');
+        var str_arr = str.split('');
+        var result = [];
+
+        for (var i =0; i<str_arr.length; i++){
+            var c = str_arr[i].charCodeAt()-97
+            var c2 = 25-c+97
+
+            result.push(String.fromCharCode(c2))
+        }
+        console.log(result.join(''))
+    </script>
+
+
+</body>
+</html>

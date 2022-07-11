@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 135 -->
+    <div>Write a JavaScript program to remove all characters from a given string that appear more than once.</div>
+
+    <script>
+        var str = prompt('enter a string');
+        var str_arr = str.split('');
+        var result = [];
+
+        for(var i=0; i<str_arr.length; i++){
+            if(str.indexOf(str_arr[i])==str.lastIndexOf(str_arr[i])){
+                result.push(str_arr[i]);
+            }
+            
+        }
+        console.log(result.join(''));
+
+    </script>
+</body>
+</html>

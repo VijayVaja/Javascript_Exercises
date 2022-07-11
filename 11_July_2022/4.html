@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 143 -->
+    <div>Write a JavaScript program to sort the strings of a given array of strings in the order of increasing lengths.<br>Note: Do not change the order if the lengths of two string are same.</div>
+
+    <script>
+        var arra = ["xyz","acd","aa","bb","zzz","", "a","b"];
+
+        for (var i = 0; i<arra.length; i++){
+            for(var j = i; j<arra.length; j++){
+                if(arra[i].length>arra[j].length){
+                    var c = arra[i];
+                    arra[i]=arra[j];
+                    arra[j]=c
+                }
+            }
+        }
+        console.log(arra)
+
+
+    </script>
+</body>
+</html>
