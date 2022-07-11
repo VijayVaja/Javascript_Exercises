@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 150 -->
+    <div>Write a JavaScript program to swap pairs of adjacent digits of a given integer of even length. </div>
+    <script>
+        var arr = [1,2,3,4,5,6,7,8];
+        for(var i = 0; i<arr.length; i+=2){
+            var c = arr[i];
+            arr[i]=arr[i+1];
+            arr[i+1]=c;
+        }
+        console.log(arr)
+    </script>
+
+</body>
+</html>

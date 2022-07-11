@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 149 -->
+    <div> Write a JavaScript program to change the capitalization of all letters in a given string. </div>
+
+    <script>
+        var str = 'w3resoURCE';
+        var str_arr = str.split('');
+        var result = [];
+
+        for(var i = 0; i<str_arr.length; i++){
+            if(isNaN(str_arr[i])){
+                if(str_arr[i] == str_arr[i].toLowerCase()){
+                    result.push(str_arr[i].toUpperCase())
+                }
+                else{
+                    result.push(str_arr[i].toLowerCase())
+                }
+            }
+            else{
+
+                result.push(str_arr[i])
+            }
+        }
+
+        console.log(result.join(''))
+
+    </script>
+</body>
+</html>
