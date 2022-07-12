@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 123 -->
+    <div>
+        Write a JavaScript program to convert a string to kebab case.
+    </div>
+<script>
+
+
+    
+function kebabcase(str){
+
+    var arr = str.split('_')
+    str = arr.join('-')
+    
+    var arr = str.split(' ')
+    str = arr.join('-')
+    
+    for(var i = 0; i<str.length; i++){
+        if(str[i].toUpperCase()==str[i]){
+            if(str[i].charCodeAt()>64 && str[i].charCodeAt()<91){
+                var arr = str.split(str[i])
+                str = arr.join('-'+str[i].toLowerCase())
+            }
+        }
+    }
+    return str
+}
+
+console.log(kebabcase('camelCase'));
+console.log(kebabcase('some text'));
+console.log(kebabcase('some-mixed_stringWith spaces_underscores-and-hyphens'));
+</script>
+
+    
+</body>
+</html>

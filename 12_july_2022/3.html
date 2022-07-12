@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 126 -->
+    <div>Write a JavaScript program to create a specified currency formatting from a given number.
+        <br> Use Intl.NumberFormat to enable country / currency sensitive formatting.</div>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat">details about Intl.NumberFormat function</a>
+    
+    <script>
+        function currency(num, curr){
+            var a = Intl.NumberFormat(undefined,{style:'currency', currency:curr});
+            a.format(num)
+            console.log(a.format(num))
+        }
+        currency(123456.789, 'EUR');
+        currency(123456.789, 'USD');
+
+    </script>
+</body>
+</html>

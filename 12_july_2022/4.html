@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 129 -->
+    <div>Write a JavaScript program to get removed elements from the end of a given array until the passed function returns true.
+    </div>
+    <script>
+        var arr = [1,2,3,4,5];
+        
+        function callbackFunc(n){
+            return n<4;
+        }
+        function myFunc(ar, func){
+            var result = [];
+            for(var i = 0; i<ar.length; i++){
+                if(func(ar[i])){
+                    result.push(ar[ar.length-i-1])
+                }
+                else{
+                    return result.reverse();
+                }
+            }
+
+        }
+        console.log(myFunc(arr,callbackFunc))
+
+    </script>
+    
+</body>
+</html>

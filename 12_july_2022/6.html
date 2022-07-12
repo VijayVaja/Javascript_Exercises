@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<!-- 136 X -->
+<!-- <div>Write a JavaScript program to generate all permutations of a string (contains duplicates).</div> -->
+
+<!-- 141 -->
+<div>Write a JavaScript program to get the highest index at which value should be inserted into array in order to maintain its sort order.</div>
+
+    <script>
+     function sortIndex(arr, n){
+        for (var i = 0; i<arr.length; i++){
+            if (arr[i]>n){
+                return i;
+            }
+        }
+     }
+    console.log(sortIndex([10, 20, 30, 30, 40], 30));
+
+    </script>
+</body>
+
+</html>
