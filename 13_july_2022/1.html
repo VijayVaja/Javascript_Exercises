@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 266 -->
+    <div>Write a JavaScript program to clamp a number within the inclusive range specified by the given boundary values a and b.</div>
+    <div>If num falls within the range, return num. <br>
+        Otherwise, return the nearest number in the range.</div>
+    <script>
+        function rangeCheck(min, max, num){
+            if(min<num && max>num){
+                return num
+            }
+            else{
+                if(num<min){
+                    return min
+                }
+                else{
+                    return max
+                }
+            }
+        }
+
+        console.log(rangeCheck(-5,-1,1))
+        console.log(rangeCheck(10,20,12))
+
+
+    </script>
+
+
+</body>
+
+</html>

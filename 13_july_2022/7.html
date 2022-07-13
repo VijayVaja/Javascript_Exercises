@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 227 -->
+    <div>Write a JavaScript program to remove elements from an array for which the given function returns false</div>
+    <script>
+
+        function callback(n){
+            return n%2==0;
+        }
+
+        function myFunc(arr,callback){
+            for(var i = 0; i<arr.length; i++){
+                if(!callback(arr[i])){
+                    arr.splice(i,1)
+                }
+            }
+            return arr
+        }
+        console.log(myFunc([1, 2, 3, 4],callback))
+
+    </script>
+</body>
+</html>

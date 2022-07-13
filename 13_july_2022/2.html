@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 257 -->
+    <div>Write a JavaScript program to convert a 2D array to a comma-separated values (CSV) string</div>
+    <script>
+        function arr2csv(arr){
+            var csv=[];
+            for(var i = 0; i<arr.length; i++){
+                csv.push(arr[i][0]+','+arr[i][1])
+            }
+            return csv.join('\n')
+        }
+        console.log(arr2csv([['a', 'b'], ['c', 'd'], ['e','f']]))
+    </script>
+</body>
+</html>

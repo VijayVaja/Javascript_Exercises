@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 234 X-->
+    <!-- <div>Write a JavaScript program to flatten a given array up to the specified depth.</div> -->
+
+    <!-- 230 -->
+    <div>Write a JavaScript program to get the human readable format of the given number of milliseconds.</div>
+    <script>
+        function format(ms){
+            var day = Math.floor(ms/86400000);
+            var hour = Math.floor(ms/3600000)%24;
+            var minute = Math.floor(ms / 60000) % 60;
+            var second= Math.floor(ms / 1000) % 60;
+            var milliseconds = Math.floor(ms)%1000;
+
+            console.log(day+" : "+hour+" : "+minute+" : "+second+" : "+milliseconds)
+        }
+        format(34325055574)
+    </script>
+
+</body>
+
+</html>

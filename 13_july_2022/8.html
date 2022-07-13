@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 225 -->
+    <div>Write a JavaScript program to get the standard deviation of an array of numbers.</div>
+
+    <script>
+        function sd(arr) {
+            var mean = 0;
+            for(var i = 0; i<arr.length; i++){
+                mean+=arr[i]
+            }
+            mean = mean/arr.length;
+
+            for (var i = 0; i<arr.length; i++){
+                arr[i]=(arr[i]-mean)**2;
+            }
+
+            var sum = 0;
+            for(var i = 0; i<arr.length; i++){
+                sum+=arr[i]
+            }
+
+            return Math.sqrt(sum / arr.length)
+        }
+
+
+        console.log(sd([10, 2, 38, 23, 38, 23, 21]))
+        console.log(sd([23, 4, 6, 457, 65, 7, 45, 8]))
+
+    </script>
+
+</body>
+
+</html>
