@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 12 -->
+    <div>Write a JavaScript function which says whether a number is perfect.</div>
+
+    <script>
+        function perfectNumber(num) {
+            var total = 0;
+            for (var i=1; i<=num/2; i++) {
+                if (num%i == 0) {
+                    total += i;
+                }
+            }
+            if (total == num) {
+                console.log(num+" is perfect number");
+            }
+            else {
+                console.log(num+" is not a perfect number");
+            }
+        }
+        perfectNumber(28);
+    </script>
+
+</body>
+
+</html>

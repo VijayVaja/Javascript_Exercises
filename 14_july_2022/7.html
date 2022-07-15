@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 14 -->
+    <div>Write a JavaScript function to convert an amount to coins</div>
+    <script>
+        function coinsCount(n, coins) {
+            var result = [];
+            for (var i = 0; i < coins.length; i++) {
+                var a = Math.floor(n / coins[i]);
+                if (a > 0) {
+                    for (var j = 0; j < a; j++) {
+                        result.push(coins[i])
+                        n -= coins[i]
+                    }
+                }
+            }
+            return result
+        }
+
+        console.log(coinsCount(47, [25, 10, 5, 2, 1]))
+
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>

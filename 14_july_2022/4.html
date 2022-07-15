@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 26 -->
+    <div>Write a JavaScript function to find longest substring in a given string without repeating characters.</div>
+    <script>
+        function subString(str){
+            var substrings = []
+            for (var i = 0; i<str.length; i++){
+                for(var j = i; j<str.length; j++){
+                    var s = str.substring(i,j+1)
+                    substrings.push(s)
+                }
+            }
+            var result= '';
+            for(var k = 0; k<substrings.length; k++){
+                if(uniqueCheck(substrings[k])){
+                    
+                    if(result.length<substrings[k].length){
+                        result = substrings[k]
+                        
+                    }
+                }
+            }
+            return result
+        }
+
+        function uniqueCheck(str){
+            var s = new Set();
+            for(var i = 0; i<str.length; i++){
+                if(s.has(str[i])){
+                    return false
+                }
+                else{
+                    s.add(str[i])
+                }
+            }
+            return true
+        }
+
+    console.log(subString('example.com'))
+    console.log(subString('google.com'))
+
+
+    </script>
+
+</body>
+
+</html>

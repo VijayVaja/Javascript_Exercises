@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 23 -->
+    <div>Write a JavaScript function to find the first not repeated character</div>
+
+    <script>
+        function firstNonRepeating(str) {
+            for (var i = 0; i<str.length; i++){
+                var a = str.indexOf(str[i]);
+                var b = str.lastIndexOf(str[i]);
+                if(a==b){
+                    return str[i]+' is first not reapeated character';
+                }
+            }
+        }
+
+        console.log(firstNonRepeating('abacddbec'))
+
+
+
+    </script>
+
+</body>
+
+</html>
