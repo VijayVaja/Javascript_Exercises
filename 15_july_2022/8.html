@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 9 -->
+    <div>Write a merge sort program in JavaScript</div>
+    <script>
+        function sort(arr){
+            if (arr.length<=1){
+                return arr
+            }
+            var c = Math.floor(arr.length/2)
+            var l = arr.slice(0,c)
+            var r = arr.slice(c)
+            return sortMerge(sort(l),sort(r))
+        }
+        function sortMerge(l,r){
+            var arr = [];
+            while(l.length && r.length){
+                if(l[0]<r[0]){
+                    arr.push(l.shift())
+                }
+                else{
+                    arr.push(r.shift())
+                }
+            }
+            return arr.concat(l.slice()).concat(r.slice())
+        }
+        console.log(sort([3,5,4,2,1,1,6,5]))
+
+    </script>
+
+    
+</body>
+</html>
